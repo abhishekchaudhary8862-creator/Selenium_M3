@@ -2,6 +2,7 @@ package organizationModule;
 
 import java.io.IOException;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -21,9 +22,12 @@ import POMUtilities.HomePompage;
 import POMUtilities.OrgInfoPompage;
 import POMUtilities.OrgPompage;
 
+//changes from eclipse to git
+
 @Listeners(GenericUtilities.ListernersUtility.class)
 public class OrgScenariosTest extends BaseClass {
 
+	
 	@Test(groups = "smoke", retryAnalyzer = GenericUtilities.RetryAnalyserUtility.class)
 	public void createOrgTest() throws IOException, InterruptedException {
 
