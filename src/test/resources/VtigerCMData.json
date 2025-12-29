@@ -1,6 +1,6 @@
 {
 "browser":"chrome",
-"password":"password",
+"password":"tiger",
 "timeouts":10,
 "url":"http://localhost:8888/",
 "username":"admin"

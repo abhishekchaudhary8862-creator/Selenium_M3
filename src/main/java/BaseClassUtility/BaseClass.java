@@ -45,7 +45,7 @@ public class BaseClass {
 //	@Parameters("browser")
 	@BeforeClass
 	public void launchTheBrowser() throws IOException {
-		String browser = putil.fetchDataFromPropertyFile("browser");
+		String browser =System.getProperty("browser", putil.fetchDataFromPropertyFile("browser"));
 
 		Reporter.log("Launch the browser", true);
 		if (browser.equals("chrome")) {
@@ -64,10 +64,10 @@ public class BaseClass {
 
 	@BeforeMethod
 	public void login() throws IOException {
-		String url = putil.fetchDataFromPropertyFile("url");
-		String username = putil.fetchDataFromPropertyFile("username");
-		String password = putil.fetchDataFromPropertyFile("password");
-		String timeouts = putil.fetchDataFromPropertyFile("timeouts");
+		String url = System.getProperty("url", putil.fetchDataFromPropertyFile("url"));
+		String username =System.getProperty("username" ,putil.fetchDataFromPropertyFile("username"));
+		String password = System.getProperty("password",putil.fetchDataFromPropertyFile("password"));
+		String timeouts =System.getProperty("timeouts" ,putil.fetchDataFromPropertyFile("timeouts"));
 
 		wutil.maximizeTheWindow(driver);
 		wutil.waitForAnElement(driver, timeouts);
